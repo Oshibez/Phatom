@@ -2,7 +2,7 @@ import discord
 import random
 from discord import app_commands
 from discord.ext import commands
-from keep_alive import keep_alive
+from Ping import ping
 import os
 from datetime import datetime
 from idle import timer
@@ -119,7 +119,7 @@ async def on_member_join(member):
       "Sorry but if you want to join you need to be whitelisted",
     ])
     await member.dm_channel.send(mean_text)
-    await member.ban(reason="Banned by Clan [TEAM] | Reason: Not whitelisted",
+    await member.ban(reason="Banned by Phantom | Reason: Not whitelisted",
                      delete_message_days=7)
     channel = bot.get_channel(1072759806743556157)
     await channel.send(message)
@@ -131,6 +131,6 @@ async def on_message(message):
   print(message.content)
 
 
-keep_alive()
+ping()
 
 bot.run(os.getenv("TOKEN"))
