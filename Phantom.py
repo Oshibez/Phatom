@@ -9,7 +9,7 @@ from idle import timer
 
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
-cmdcaller = "c-"
+cmdcaller = "p-"
 
 badge = ""
 
